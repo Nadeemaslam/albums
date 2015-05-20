@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+			<div class="contact">
+				<div class="contact-in col-md-9">
+				<h3>Add Photo</h3>
+				<div class="  contact-left">
+				  
+					    <form  method='POST' action='' enctype="multipart/form-data">
+					    	{% csrf_token %}
+					    	<div>
+								{% if form.non_field_errors %}
+								    <ul>
+								      {% for error in form.non_field_errors %}
+								        <li>{{ error }}</li>
+								      {% endfor %}
+								    </ul>
+                                {% endif %}
+                            </div>
+                            <div>
+						    	<span>Author</span>
+						    	<input name="author" value="{{request.user}}" type="text" class="textbox" readonly>
+						    	<span>{{ form.author.errors }}</span>
+						    </div>
+						    <div>
+						    	<span>Gallery Name </span>
+						    	<input name="gallery_name" type="text" class="textbox">
+						    	<span>{{ form.gallery_name.errors }}</span>
+						    </div>
+						    <div>
+						    	<span>Title</span>
+						    	<input name="title" type="text" class="textbox">
+						    	<span>{{ form.title.errors }}</span>
+						    </div>
+						    <div>
+						    	<span>Description</span>
+						    	<textarea name="description" class="textbox"></textarea>
+						    	<span>{{ form.description.errors }}</span>
+						    </div>
+						    <div>
+						    	<span>Publishing Date</span>
+						    	<input name="created" type="date" class="textbox">
+						    	<span>{{ form.created.errors }}</span>
+						    </div>
+						    <div>
+						    	<span></span>
+						    	<input type="file" name="pic" value="Upload Image" accept="image/*" class="textbox">
+						    	<span>{{ form.pic.errors }}</span>
+						    </div>
+						    <div>
+						   		<span><input type='submit' value='Upload' class='btn btn-default' /></span>
+						    </div>
+						    
+					    </form>
+				</div>
+
+      			</div>
+    		</div>
+</div>
+{% endblock %}

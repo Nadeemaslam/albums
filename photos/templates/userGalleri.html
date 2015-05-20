@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+		<div class="container">
+			<div class="specials">
+			<h3>Gallery by {{request.user}}</h3>
+				<div class="special-top">
+					{% for pic in object_list %}
+					{% if pic.author == request.user.username %}
+					<div class="col-md-3 special-in ">
+								<a href="#" ><img src="/{{ pic.pic }}" class="img-responsive zoom-img" alt=""/>
+								</a>
+								<h5><a href="/{{pic.id}}">{{ pic.title }}</a></h5>
+					</div>
+					{% endif %}
+					{% endfor %}
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	<!---->
+{% endblock %}

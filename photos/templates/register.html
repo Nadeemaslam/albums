@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+			<div class="contact">
+				<div class="contact-in col-md-9">
+				<h3>Register</h3>
+				<div class="  contact-left">
+				  
+					    <form  method='POST' action=''>
+					    	{% csrf_token %}
+					    	<div>
+						    	<span>Name</span>
+						    	<input name="username" type="text" class="textbox">
+						    	<span>{{ form.username.errors }}</span>
+						    </div>
+						    <div>
+						    	<span>Email</span>
+						    	<input name="email" type="text" class="textbox">
+						    	<span>{{ form.email.errors }}</span>
+						    </div>
+						    <div>
+						    	<span>Password</span>
+						    	<input name="password1" type="password" class="textbox">
+						    	<span>{{ form.password1.errors }}</span>
+						    </div>
+						    <div>
+						    	<span>Password Again</span>
+						    	<input name="password2" type="password" class="textbox">
+						    	<span>{{ form.password2.errors }}</span>
+						    </div>
+						    <div>
+						   		<span><input type='submit' value='{% if submit_btn %}{{ submit_btn }}{% else %}Submit{% endif %}' class='btn btn-default' /></span>
+						    </div>
+					    </form>
+				</div>
+
+      			</div>
+    		</div>
+</div>
+{% endblock %}
