@@ -13,9 +13,18 @@
 					<div class="  contact-left">
 					<form method="post" action="{% url "password_reset_reset" token %}">
 						{% csrf_token %}
-						<div>
-						{{ form.as_p }}
-					    </div>
+						
+						    <div>
+						    	<span>Password</span>
+						    	<input name="password1" type="password" class="textbox">
+						    	<span>{{ form.password1.errors }}</span>
+						    </div>
+						    <div>
+						    	<span>Confirm Password</span>
+						    	<input name="password2" type="password" class="textbox">
+						    	<span>{{ form.password2.errors }}</span>
+						    </div>
+					    
 					    <div>
 						<span><input type="submit" value="{% trans "Set new password" %}"></span>
 						</div>
