@@ -124,6 +124,6 @@ STATIC_ROOT = '/srv/www/albums/static/'
 #)
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/srv/www/albums/albums/media/'
+MEDIA_ROOT = '/srv/www/albums/media/'
 #MEDIA_ROOT = '/home/shahid/Desktop/albums/media/'
 
