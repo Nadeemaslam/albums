@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'photos',
   #  'django_admin_bootstrapped',
+    'password_reset',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -101,13 +102,25 @@ USE_L10N = True
 
 USE_TZ = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'shahidgadda1@gmail.com'
+EMAIL_HOST_PASSWORD = 'dbkpyjrvkofbxfhh'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/srv/www/albums/static/'
+#STATIC_ROOT = '/home/shahid/Desktop/albums/static/'
+
+STATICFILES_DIRS = (
+    "/home/shahid/Desktop/albums/static",
+)
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/srv/www/albums/media/'
+MEDIA_ROOT = '/home/shahid/Desktop/albums/media/'
 

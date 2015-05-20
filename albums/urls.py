@@ -20,6 +20,7 @@ admin.autodiscover()
 urlpatterns = [
 	url(r'^', include('photos.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^password_reset_recover/', include('password_reset.urls')),
 ]
 
 
