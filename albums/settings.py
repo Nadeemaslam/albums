@@ -115,12 +115,15 @@ EMAIL_USE_TLS = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/srv/www/albums/static/'
+
 #STATIC_ROOT = '/home/shahid/Desktop/albums/static/'
 
-STATICFILES_DIRS = (
-    "/home/shahid/Desktop/albums/static",
-)
+#STATICFILES_DIRS = (
+#    "/home/shahid/Desktop/albums/static",
+#)
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home/shahid/Desktop/albums/media/'
+MEDIA_ROOT = '/srv/www/albums/albums/media/'
+#MEDIA_ROOT = '/home/shahid/Desktop/albums/media/'
 
