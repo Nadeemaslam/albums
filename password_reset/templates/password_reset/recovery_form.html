@@ -15,7 +15,9 @@
 						<form method="post" action="{{ url }}">
 							{% csrf_token %}
 							<div>
-							{{ form.as_p }}
+							<span>Username/Email</span>
+						    	<input name="username_or_email" type="text" class="textbox">
+						    	<span>{{ form.username_or_email.errors }}</span>
 						    </div>
 						    <div>
 							<span><input type="submit" value="{% trans "Recover my password" %}"></span>
