@@ -4,7 +4,9 @@
 
 <div class="container">
 			<div class="contact">
-				<div class="contact-in col-md-9">
+				<div class="contact-in col-md-2">
+                </div>
+				<div class="contact-in col-md-8">
 				<h3>Add Photo</h3>
 				<div class="  contact-left">
 				  
@@ -25,18 +27,15 @@
 						    	<span>{{ form.author.errors }}</span>
 						    </div>
 						    <div>
-						    	<span>Gallery Name </span>
-						    	<input name="gallery_name" type="text" class="textbox">
+						    	<input name="gallery_name" type="text" placeholder="Gallery Name" class="textbox">
 						    	<span>{{ form.gallery_name.errors }}</span>
 						    </div>
 						    <div>
-						    	<span>Title</span>
-						    	<input name="title" type="text" class="textbox">
+						    	<input name="title" type="text" placeholder="Title" class="textbox">
 						    	<span>{{ form.title.errors }}</span>
 						    </div>
 						    <div>
-						    	<span>Description</span>
-						    	<textarea name="description" class="textbox"></textarea>
+						    	<textarea name="description" placeholder="Description"  class="textbox"></textarea>
 						    	<span>{{ form.description.errors }}</span>
 						    </div>
 						    <div>
@@ -46,11 +45,11 @@
 						    </div>
 						    <div>
 						    	<span></span>
-						    	<input type="file" name="pic" value="Upload Image" accept="image/*" class="textbox">
+						    	<input type="file" name="pic" value="Upload Image" accept="image/*" class=" btn btn-success">
 						    	<span>{{ form.pic.errors }}</span>
 						    </div>
 						    <div>
-						   		<span><input type='submit' value='Upload' class='btn btn-default' /></span>
+						   		<span><input type='submit' value='Upload' class=" btn btn-success" /></span>
 						    </div>
 						    
 					    </form>

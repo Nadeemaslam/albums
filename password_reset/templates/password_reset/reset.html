@@ -15,23 +15,23 @@
 						{% csrf_token %}
 						
 						    <div>
-						    	<span>Password</span>
-						    	<input name="password1" type="password" class="textbox">
+						    	<span></span> 
+						    	<input name="password1" type="password" placeholder="Password" class="textbox">
 						    	<span>{{ form.password1.errors }}</span>
 						    </div>
 						    <div>
-						    	<span>Confirm Password</span>
-						    	<input name="password2" type="password" class="textbox">
+						    	<span></span>
+						    	<input name="password2" type="password" placeholder="Confirm Password" class="textbox">
 						    	<span>{{ form.password2.errors }}</span>
 						    </div>
 					    
 					    <div>
-						<span><input type="submit" value="{% trans "Set new password" %}"></span>
+						<span><input type="submit" value="{% trans "Set new password" %}" class="btn btn-success"></span>
 						</div>
 					</form>
 					</div>
 				{% endif %}
 			</div>
 	</div>
-</div> 
+</div>
 {% endblock %}

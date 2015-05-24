@@ -10,22 +10,22 @@
 				<div class="contact-in col-md-2">
 				</div>
 				<div class="contact-in col-md-8">
-				<h3>Recover the Password:</h3>
+				<h3>Recover your Password:</h3>
 				<div class="  contact-left">
 						<form method="post" action="{{ url }}">
 							{% csrf_token %}
 							<div>
-							<span>Username/Email</span>
-						    	<input name="username_or_email" type="text" class="textbox">
+							<span></span>
+						    	<input name="username_or_email" type="text" placeholder="Username/Email" class="textbox">
 						    	<span>{{ form.username_or_email.errors }}</span>
 						    </div>
 						    <div>
-							<span><input type="submit" value="{% trans "Recover my password" %}"></span>
+							<span><input type="submit" value="{% trans "Recover my password" %}" class="btn btn-success"></span>
 							</div>
 						</form>
 				</div>
 
       			</div>
     </div>
-</div>    
+</div>   
 {% endblock %}
