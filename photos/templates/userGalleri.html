@@ -7,7 +7,7 @@
 			<h3>Gallery by {{request.user}}</h3>
 				<div class="special-top col-md-12">
 					{% for pic in object_list %}
-						{% if pic.author == request.user.username and picture.gallery_name == list.gallery_name %}
+						{% if pic.author == request.user.username %}
 						<div class="col-md-3 special-in ">
 									<a href="#" ><img src="/{{ pic.pic }}" class="img-responsive zoom-img" alt=""/>
 									</a>
