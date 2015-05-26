@@ -8,6 +8,7 @@ class Picture(models.Model):
 	description = models.TextField()
 	created = models.DateTimeField()
 	pic = models.ImageField(upload_to='pic')
+	
 	def __unicode__(self):
 		return self.gallery_name
 
