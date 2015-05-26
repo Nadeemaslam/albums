@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponseRedirect, Http404
-from django.contrib.auth import logout, login, authenticate
-from django.contrib import messages
+from django.contrib.auth import logout, login, authenticate 
+from django.contrib import messages 
 from django.core.urlresolvers import reverse
 
 
@@ -10,7 +10,7 @@ from .forms import LoginForm, RegistrationForm
 def logout_view(request):
 	print "logging out"
 	logout(request)
-	messages.success(request, "<strong>Successfully Logged out</strong>. Feel free to <a href='%s'>login</a> again." %(reverse("auth_login")), extra_tags='safe, abc')
+	messages.success(request, "<strong>Successfully Logged out</strong>.Feel free to <a href='%s'>login</a> again." %(reverse("auth_login")), extra_tags='safe, abc')
 	messages.warning(request, "There's a warning.")
 	messages.error(request, "There's an error.")
 	return HttpResponseRedirect('%s'%(reverse("auth_login")))

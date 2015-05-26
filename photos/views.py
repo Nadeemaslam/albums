@@ -1,4 +1,6 @@
-from django.shortcuts import render, render_to_response, HttpResponseRedirect, Http404
+from django.shortcuts import render,render_to_response
+from django.shortcuts import HttpResponseRedirect
+from django.shortcuts import Http404
 from django.contrib.auth import logout, login, authenticate
 from django.contrib import messages
 from photos.forms import PictureForm
