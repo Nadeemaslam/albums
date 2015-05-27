@@ -15,8 +15,4 @@ def add_photos_view(request):
 			return HttpResponseRedirect('/')
 	else:
 	    form = PictureForm()
-	args = {}
-	args.update(csrf(request))
-	args['form'] = form
-
 	return render(request,'addPhoto.html')
